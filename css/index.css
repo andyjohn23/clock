@@ -8,6 +8,10 @@
 }
 body{
     background: linear-gradient(to right, rgb(53, 168, 245), rgb(53, 168, 245));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .clock{
     width: 300px;
@@ -71,6 +75,33 @@ body{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     transform-origin: bottom;
-    transform:translateX(-50%) rotate(var(--rotation));
+    transform:translateX(-50%) rotate(calc(var(--rotation) * 1deg));
     z-index: 10;
+}
+.clock .hand.second-hand{
+    width: 5px;
+    height: 45%;
+    background-color: red;
+}
+.clock .hand.hour-hand{
+    width: 10px;
+    height: 30%;
+    background-color: black;
+}
+.clock .hand.minute-hand{
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+.clock::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
