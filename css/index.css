@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+* ::after, ::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+}
+body{
+    background: linear-gradient(to right, rgb(53, 168, 245), rgb(53, 168, 245));
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+}
+.clock .numbers{
+    --rotation:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 20px;
+}
+.clock .first-number{
+    --rotation:30deg;
+}
+.clock .second-number{
+    --rotation:60deg;
+}
+.clock .third-number{
+    --rotation:90deg;
+}
+.clock .fourth-number{
+    --rotation:120deg;
+}
+.clock .fifth-number{
+    --rotation:150deg;
+}
+.clock .sixth-number{
+    --rotation:180deg;
+}
+.clock .seventh-number{
+    --rotation:210deg;
+}
+.clock .eigth-number{
+    --rotation:240deg;
+}
+.clock .ninth-number{
+    --rotation:270deg;
+}
+.clock .tenth-number{
+    --rotation:300deg;
+}
+.clock .eleventh-number{
+    --rotation:330deg;
+}
+.clock .hand{
+    --rotation:0;
+    position: absolute;
+    bottom:50%;
+    left: 50%;
+    width: 10px;
+    height: 45%;
+    background-color: black;
+    border: 1px solid white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transform-origin: bottom;
+    transform:translateX(-50%) rotate(var(--rotation));
+    z-index: 10;
+}
